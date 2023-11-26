@@ -1,10 +1,13 @@
 package webui.protei.base;
 
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import webui.protei.common.Configuration;
+import webui.protei.pages.MainPage;
 
 import java.awt.*;
 import java.io.IOException;
@@ -21,14 +24,17 @@ public abstract class BaseUITest {
     public void beforeTest() throws InterruptedException, IOException {
         driver = new ChromeDriver();
         driver.get(BASE_URL);
-        Thread.sleep(5000);
+        Thread.sleep(500);
         driver.manage().window().maximize();
     }
 
-    @AfterEach
+
+
+
+   /* @AfterEach
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
-    }
+    }*/
 }
